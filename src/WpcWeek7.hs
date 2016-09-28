@@ -1,4 +1,4 @@
-module WpcWeek7(BplusTree (..),searchNode,insert,link,findChild) where
+module WpcWeek7(BplusTree (..),searchNode,insert,link,findChild,createEmptyRoot) where
 import Data.Maybe
 import Data.List(sortOn)
 
@@ -39,6 +39,12 @@ showBplusTree (Node arity' keys' children' _) = shows ("Node " ++ (show arity') 
 
 instance (Show key, Show value) => Show (BplusTree key value) where
   showsPrec _ x = showBplusTree x
+
+{-
+Creates an empty root node with a specified arity.
+-}
+createEmptyRoot :: Int -> BplusTree key value
+createEmptyRoot n = Node n [] [] Nothing
 
 {-
 Maybe finds a Leaf node that contains a certain key.

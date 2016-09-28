@@ -47,7 +47,7 @@ Each constructor takes the arity of the tree. This is needed when creating the
 root node. Later this is handled by the insert function.
 
 Insert a mapping from key 4 to value '4' in an empty tree with an arity of 3, like this:
-```insert 4 '4' (Node 3 [] [] Nothing)```
+```insert 4 '4' (createEmptyRoot 3)```
 
 Finding a Leaf that contains the mapping for a key like this:
 ```searchNode 4 tree```
