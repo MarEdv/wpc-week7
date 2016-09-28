@@ -1,4 +1,4 @@
-module WpcWeek7(BplusTree (..),searchNode,insert,link,findChild,insert2,getLowestKey,flatmap,createNode) where
+module WpcWeek7(BplusTree (..),searchNode,insert,link,findChild) where
 import Data.Maybe
 import Data.List(sortOn)
 
